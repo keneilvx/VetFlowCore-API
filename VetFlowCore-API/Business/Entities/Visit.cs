@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using VetFlowCore.Entities;
+using VetFlowCore_API.Business.Entities;
 
 namespace Veterinarian_Management_System_API.Business.Models
 {

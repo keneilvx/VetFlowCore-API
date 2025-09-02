@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using VetFlowCore_API.Business.Entities;
 
 namespace Veterinarian_Management_System_API.Business.Models
 {

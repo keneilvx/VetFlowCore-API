@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using VetFlowCore_API.Business.Entities;
 
 namespace Veterinarian_Management_System_API.Business.Models
@@ -7,6 +8,10 @@ namespace Veterinarian_Management_System_API.Business.Models
     {
         [Key]
         public int EmployeeID { get; set; }
+
+        public int? OrganizationID { get; set; }
+
+        public int RoleId {  get; set; }
 
         [MaxLength(100)]
         public string? FirstName { get; set; }
@@ -33,7 +38,10 @@ namespace Veterinarian_Management_System_API.Business.Models
         public string? LicenseNumber { get; set; }
 
         // Navigation
-        public ICollection<Visit>? Visits { get; set; }
-        public ICollection<MedicalNote>? MedicalNotesEntered { get; set; }
+        [ForeignKey(nameof(Organization))]
+        public Organization? Organization { get; set; }
+
+        [ForeignKey(nameof(Role))]
+        public Role? Role { get; set; }
     }
 }
